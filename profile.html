@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Blue Angels Virtual</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .profile-container {
+            padding: 50px 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .profile-container h2 {
+            margin-bottom: 20px;
+        }
+        .profile-container p {
+            margin: 10px 0;
+        }
+        .profile-container button {
+            padding: 10px;
+            background-color: #0033a0;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .profile-container button:hover {
+            background-color: #002080;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <h2>User Profile</h2>
+        <p id="welcome-message"></p>
+        <p id="vatsim-cid"></p>
+        <p id="positions"></p>
+        <p><button onclick="logOut()">Log OuTt</button></p>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js"></script>
+    <script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyDZZkwZ56-JXuyOwUQXRoN4gfBWYeUtkhI",
+    authDomain: "bava-ff681.firebaseapp.com",
+    projectId: "bava-ff681",
+    storageBucket: "bava-ff681.firebasestorage.app",
+    messagingSenderId: "877435197012",
+    appId: "1:877435197012:web:04d4970760ae7e59a5ffc1",
+    measurementId: "G-64SD5CGV5T"
+  };
+
+  // Initialize Firebase
+  // Initialize Firebase
+    const app = firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore(app);
+
+    document.addEventListener("DOMContentLoaded", async () => {
+        const googleId = localStorage.getItem("googleId");
+        const firstName = localStorage.getItem("userFirstName");
+
+        if (!googleId || !firstName) {
+            window.location.href = "login.html";
+            return;
+        }
+
+        document.getElementById("welcome-message").textContent = `Welcome, ${firstName}!`;
+
+        try {
+            // Retrieve user data from Firestore
+            const querySnapshot = await db
+                .collection("roster")
+                .where("cid", "==", googleId)
+                .get();
+
+            if (!querySnapshot.empty) {
+                querySnapshot.forEach((doc) => {
+                    const data = doc.data();
+                    document.getElementById("vatsim-cid").textContent = `VATSIM CID: ${data.cid}`;
+                    document.getElementById("positions").textContent = `Position(s): ${data.positions}`;
+                });
+            } else {
+                document.getElementById("vatsim-cid").textContent = "VATSIM CID: Not Found";
+            }
+        } catch (error) {
+            console.error("Error retrieving roster data:", error);
+        }
+    });
+
+    function logOut() {
+        localStorage.removeItem("googleId");
+        localStorage.removeItem("userFirstName");
+        window.location.href = "login.html";
+    }
+</script>
+</body>
+</html>
