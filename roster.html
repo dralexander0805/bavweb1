@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Angels Virtual</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: #0033a0;
+            color: #fff;
+            padding: 20px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header img {
+            height: 50px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: url('https://lirp.cdn-website.com/md/unsplash/dms3rep/multi/opt/photo-1476058262011-9a78b43bb832-1920w.jpg') no-repeat center center/cover;
+            color: #fff;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            mix-blend-mode: difference;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .hero button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: black;
+            background: #ffcc00;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .hero button:hover {
+            background: #ffc107;
+        }
+        .features {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .features table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 80%;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .features th, .features td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .features th {
+            background-color: #0033a0;
+            color: #fff;
+            font-weight: 600;
+        }
+        .features tr:nth-child(even) {
+            background-color: #f4f4f9;
+        }
+        .features tr:hover {
+            background-color: #ddd;
+        }
+        footer {
+            background: #111;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Blue_Angels_Insignia.svg/1200px-Blue_Angels_Insignia.svg.png" alt="Blue Angels Virtual Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="fly.html">Watch Us Fly</a>
+            <a href="apply.html">Join Us</a>
+            <a href="roster.html">Pilot Roster</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1 id="hero-title">ROSTER</h1>
+        <p>Blue Angels Virtual</p>
+        <button onclick="location.href='apply.html'">Join Our Formation</button>
+    </section>
+
+    <section class="features" id="features">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>CID</th>
+                <th>Position</th>
+                <th>Responsibilities</th>
+            </tr>
+            <tr>
+                <td>Jack Sampson</td>
+                <td>1731057</td>
+                <td>Pilot, #1 Aircraft</td>
+                <td>Webmaster, Admiral, CFI.</td>
+            </tr>
+            <tr>
+                <td>Ben Hoffman</td>
+                <td>1853203</td>
+                <td>Pilot, #? Aircraft</td>
+                <td>Vice Admiral, CFI, Event Planner.</td>
+            </tr>
+        </table>
+    </section>
+
+    <footer>
+        <h3>Blue Angels Virtual</h3>
+        <p>
+            BlueAngelsVirtual.org is in NO WAY affiliated with the U.S. Navy or any real-world Blue Angels organization.  
+            We are a stand-alone, non-profit organization of flight simulation enthusiasts interested in simulating aerobatic procedures and formations on the VATSIM network.
+        </p>
+        <p>&copy; 2025 Blue Angels Virtual. All Rights Reserved.</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="https://discord.gg/V4zJb5WyEz">Contact</a>
+            <a href="staff.html">Staff</a>
+            <a href="policies.html">Policies & Utilities</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="cookies.html">Cookie Policy</a>
+        </div>
+    </footer>
+</body>
+</html>
