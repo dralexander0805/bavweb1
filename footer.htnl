@@ -1,0 +1,18 @@
+<footer>
+    <div style="text-align: center; padding: 20px; background: #111; color: #fff;">
+        <h3>Blue Angels Virtual</h3>
+        <p>
+            BlueAngelsVirtual.org is in NO WAY affiliated with the U.S. Navy or any real-world Blue Angels organization.  
+            We are a stand-alone, non-profit organization of flight simulation enthusiasts interested in simulating aerobatic procedures and formations on the VATSIM network.
+        </p>
+        <p>&copy; 2025 Blue Angels Virtual. All Rights Reserved.</p>
+        <div class="footer-links" style="margin-top: 20px;">
+            <a href="index.html" style="color: #ffcc00; text-decoration: none; margin: 0 15px;">Home</a>
+            <a href="https://discord.gg/V4zJb5WyEz" style="color: #ffcc00; text-decoration: none; margin: 0 15px;">Contact</a>
+            <a href="staff.html" style="color: #ffcc00; text-decoration: none; margin: 0 15px;">Staff</a>
+            <a href="policies.html" style="color: #ffcc00; text-decoration: none; margin: 0 15px;">Policies & Utilities</a>
+            <a href="privacy.html" style="color: #ffcc00; text-decoration: none; margin: 0 15px;">Privacy Policy</a>
+            <a href="cookies.html" style="color: #ffcc00; text-decoration: none; margin: 0 15px;">Cookie Policy</a>
+        </div>
+    </div>
+</footer>
