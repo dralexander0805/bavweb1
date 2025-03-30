@@ -31,10 +31,12 @@ body {
             color: #fff;
         }
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            mix-blend-mode: difference;
-        }
+    font-size: 4rem; /* Increase size */
+    margin-bottom: 20px;
+    mix-blend-mode: normal; /* Avoid visibility issues */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* Add depth */
+    font-weight: 700; /* Make it bolder */
+}
         .hero p {
             font-size: 1.2rem;
             margin-bottom: 30px;
