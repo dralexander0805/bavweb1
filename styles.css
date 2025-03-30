@@ -1,0 +1,136 @@
+body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: #0033a0;
+            color: #fff;
+            padding: 20px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header img {
+            height: 50px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: url('https://lirp.cdn-website.com/md/unsplash/dms3rep/multi/opt/photo-1476058262011-9a78b43bb832-1920w.jpg') no-repeat center center/cover;
+            color: #fff;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            mix-blend-mode: difference;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .hero button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: black;
+            background: #ffcc00;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero button:hover {
+            background: #ffc107;
+        }
+        .about {
+            text-align: center;
+            padding: 50px 20px;
+            background: url('Fadeoff.png') no-repeat center center/cover;
+            color: #fff;
+        }
+        .about h2 {
+            font-size: 2rem;
+            mix-blend-mode: difference;
+            margin-bottom: 20px;
+        }
+        .about p {
+            font-size: 1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .features {
+            padding: 50px 20px;
+            background: #f4f4f9;
+            text-align: center;
+        }
+        .features h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        .features-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .text-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .text-content ul li {
+            margin-bottom: 10px;
+        }
+        .partners .logos img {
+            max-height: 60px;
+            transition: transform 0.3s ease;
+            -webkit-filter: drop-shadow(5px 5px 5px #222);
+            filter: drop-shadow(5px 5px 5px #222);
+        }
+        .partners .logos img:hover {
+            transform: scale(1.1);
+            mix-blend-mode: difference;
+        }
+        .cta {
+            background: #0033a0;
+            color: #fff;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .cta button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #0033a0;
+            background: #ffcc00;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .cta button:hover {
+            background: #ffc107;
+        }
+        footer {
+            background: #111;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
